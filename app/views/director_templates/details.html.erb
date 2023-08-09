@@ -1,7 +1,8 @@
 <h1>Director #<%= @the_director.id %> details</h1>
 
-<%= @the_director.id %>
-
+  <td>
+      <a href="/directors">Go back</a>
+  </td>
 <hr>
 
 <dl>
@@ -24,6 +25,7 @@
   <dd><%= @the_director.updated_at %> </dd>
 </dl>
 
+<hr>
 <h2>Filmography</h2>
 <% matching_movies=Movie.where({ :director_id => @the_director.id }) %>
 
